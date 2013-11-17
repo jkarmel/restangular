@@ -17,7 +17,7 @@ module.provider('Restangular', function() {
               return _.contains(safeMethods, operation.toLowerCase());
             };
 
-            var absolutePattern = /^https?:\/\//i;
+            var absolutePattern = /^https?:\/\/|\//i;
             config.isAbsoluteUrl = function(string) {
               return string && absolutePattern.test(string);
             }
